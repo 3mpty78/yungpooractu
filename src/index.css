@@ -9,10 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--white);
-  cursor: none;
-}
-body:hover #customCursor {
-  opacity: 1;
 }
 
 code {

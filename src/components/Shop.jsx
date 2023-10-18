@@ -26,7 +26,7 @@ const items = [
 export function Shop() {
   return (
     <>
-      <h2>Shop</h2>
+      <h2>Merch</h2>
       <div id="shop">
         {items.map((val, key) => {
           return (
