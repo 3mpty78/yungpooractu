@@ -13,8 +13,9 @@ function App() {
                   <Navigation />
                   <header id="home" className="App-header">
                         <h1 className="hoverContainer">
-                              Yung Poor <span>Alo</span>
+                              <span>JEUNE</span> PAUVRE
                         </h1>
+                        <h2>Yung Poor Alo</h2>
                   </header>
                   <DisplayClip />
                   <Stream />

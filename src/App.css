@@ -1,4 +1,5 @@
 @import "./styles/variables.css";
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
 
 @font-face {
       font-family: "full";
@@ -26,10 +27,17 @@
 h1 {
       font-family: "outlined";
       font-size: 6vw;
+      margin: 0;
 }
 h1 span {
       font-family: "full";
       color: var(--blue);
+}
+.App header h2 {
+      position: relative;
+      font-family: "Reenie Beanie", cursive;
+      background: transparent;
+      color: var(--white);
 }
 
 /* Navigation style */
@@ -163,12 +171,10 @@ h1 span {
       background: var(--white);
 }
 h2 {
+      z-index: 1;
       position: sticky;
       top: 0;
-      height: 3em;
-      display: flex;
-      align-items: center;
-      padding: 0 2%;
+      padding: 25px;
       margin: 0;
       font-family: "full";
       text-transform: uppercase;
@@ -193,43 +199,88 @@ iframe:hover {
 
 #stream {
       margin: 2em 0;
-      height: 50vh;
+      height: 70vh;
       display: flex;
       align-items: center;
       flex-flow: row wrap;
-}
-#stream ul {
-      margin: 0 auto;
-      width: 75%;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-}
-#stream ul li {
-      list-style-type: none;
-      height: 100px;
-      width: 200px;
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 10px;
-      margin: 20px;
-      border: 1px solid var(--white);
-      border-radius: 15px;
-      box-shadow: var(--shadow);
-      transition: 0.4s;
-}
-#stream img {
-      width: 60px;
-}
-#stream a {
-      font-family: "Segoe UI";
-      color: var(--background);
-      font-size: 25px;
-      display: flex;
-      flex-flow: row;
-      align-items: center;
+
+      & .last_release {
+            position: relative;
+
+            flex: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            & img {
+                  width: 35%;
+                  border-radius: 15px;
+                  filter: drop-shadow(var(--shadow));
+            }
+
+            & h3 {
+                  font-size: 25px;
+                  font-family: "full";
+                  margin: 15px 0;
+            }
+
+            & p {
+                  margin: 0 0 15px 0;
+                  font-style: italic;
+            }
+
+            & a {
+                  border: 1px solid var(--background);
+                  padding: 5px 30px;
+                  border-radius: 5px;
+                  background: var(--white);
+                  color: var(--background);
+                  transition: 0.2s ease-out;
+
+                  &:hover {
+                        background: var(--background);
+                        color: var(--white);
+                  }
+            }
+      }
+      & ul {
+            flex: 1;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+
+            & li {
+                  list-style-type: none;
+                  height: 50px;
+                  width: 30%;
+                  padding: 10px;
+                  display: flex;
+                  flex-flow: row nowrap;
+                  align-items: center;
+                  justify-content: space-between;
+                  border: 1px solid var(--white);
+                  border-radius: 15px;
+                  box-shadow: var(--shadow);
+                  transition: 0.4s;
+
+                  & img {
+                        width: 40px;
+                  }
+
+                  & a {
+                        font-family: "Segoe UI";
+                        color: var(--background);
+                        font-size: 20px;
+                  }
+            }
+      }
 }
 
 #stream li:nth-child(1):hover {
@@ -327,20 +378,25 @@ iframe:hover {
 /* contact */
 
 #contact {
+      position: relative;
       height: 25vh;
       padding: 25px 0;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
       background: var(--background);
 }
 #contact h2 {
+      width: 50%;
+      padding-top: 0;
+      width: fit-content;
       background: var(--background);
       color: var(--white);
 }
 #contact h3 {
       color: var(--white);
       font-family: "full";
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       font-size: 20px;
 }
 #contact img {
@@ -348,18 +404,20 @@ iframe:hover {
       filter: invert(0.75);
 }
 .links_container {
+      width: 50%;
+      height: 100%;
+      padding-right: 25px;
       display: flex;
       flex-flow: row wrap;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
 
       & .links {
-            width: 25%;
             height: 100%;
             display: flex;
             flex-flow: column wrap;
             align-items: flex-end;
-            justify-content: space-between;
+            justify-content: space-evenly;
 
             & span {
                   width: 200px;
